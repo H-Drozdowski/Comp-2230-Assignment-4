@@ -11,31 +11,35 @@
 
         <div id = "survey-container">
 
-            <div id = "name-input-container">
-                <input id = "name" type = "text">
+            <div id = "nameInputContainer">
+                <input id = "name" type = "text" name = "name">
             </div>
 
             <div id = "radio-container">
 
                 <div class = "radio-option-container">
                     <img src="" alt="">
-                    <input type="radio" id = "characterGon" value = "gon">
+                    <input type="radio" id = "characterGon" value = "gon" name = "favCharacter">
                 </div>
 
                 <div class = "radio-option-container">
                     <img src="" alt="">
-                    <input type="radio" id = "characterKillua" value = "killua">
+                    <input type="radio" id = "characterKillua" value = "killua" name = "favCharacter">
                 </div class = "radio-option-container">
 
                 <div class = "radio-option-container">
                     <img src="" alt="">
-                    <input type="radio" id = "characterKurapika" value = "kurapika">
+                    <input type="radio" id = "characterKurapika" value = "kurapika" name = "favCharacter">
                 </div>
                 
             </div>
 
-            <div id = "dropdown-container">
-                <select name="" id="storyArc">
+            <div id = "favoriteEpisodeContainer">
+                <input type="number" name="favoriteEpisode" id="favoriteEpisode">
+            </div>
+
+            <div id = "dropdownContainer">
+                <select name = "storyArc" id="storyArc">
                     <option value="notSelected">Select Your Favorite Story Arc</option>
                     <option value="hunterExam">Hunter Exam</option>
                     <option value="heavensArena">heavensArena</option>
@@ -46,9 +50,19 @@
                     <option value="successionContest">Succession Contest</option>
                 </select>
             </div>
+                
+            <div id = "RatingContainer">
+                <input type="range" id = rating name = "rating" min="0" max="10">
+            </div>
+
+            <div id = "emailContainer">
+                <input type="text" id = "email" name = "email">
+            </div>
         </div>
     </form>
 
-    <script src = "script.js"></script>
+    <footer>
+        <script src = "script.js"></script>
+    </footer>
 </body>
 </html>

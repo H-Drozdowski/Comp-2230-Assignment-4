@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunter x Hunter Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id = "surveyForm" action = "https://httpbin.org/post" method = "post">
+
+        <div id = "surveyContainer">
+            <h1>Hunter X Hunter Survey</h1>
+
+            <div id = "nameInputContainer">
+                <input id = "name" type = "text" name = "name">
+            </div>
+
+            <div id = "radio-container">
+
+                <div class = "radio-option-container">
+                    <img src="" alt="">
+                    <input type="radio" id = "characterGon" value = "gon" name = "favCharacter">
+                </div>
+
+                <div class = "radio-option-container">
+                    <img src="" alt="">
+                    <input type="radio" id = "characterKillua" value = "killua" name = "favCharacter">
+                </div class = "radio-option-container">
+
+                <div class = "radio-option-container">
+                    <img src="" alt="">
+                    <input type="radio" id = "characterKurapika" value = "kurapika" name = "favCharacter">
+                </div>
+                
+            </div>
+
+            <div id = "favoriteEpisodeContainer">
+                <input type="number" name="favoriteEpisode" id="favoriteEpisode">
+            </div>
+
+            <div id = "dropdownContainer">
+                <select name = "storyArc" id="storyArc">
+                    <option value="notSelected">Select Your Favorite Story Arc</option>
+                    <option value="hunterExam">Hunter Exam</option>
+                    <option value="heavensArena">heavensArena</option>
+                    <option value="yorkNewCity">York New City</option>
+                    <option value="greedIsland">Greed Island</option>
+                    <option value="chimeraAnt">Chimera Ant</option>
+                    <option value="electionArc">Chairman Election</option>
+                    <option value="successionContest">Succession Contest</option>
+                </select>
+            </div>
+                
+            <div id = "RatingContainer">
+                <input type="range" id = rating name = "rating" min="0" max="10">
+            </div>
+
+            <div id = "emailContainer">
+                <input type="text" id = "email" name = "email">
+            </div>
+        </div>
+    </form>
+
+    <footer>
+        <script src = "script.js"></script>
+    </footer>
+</body>
+</html>

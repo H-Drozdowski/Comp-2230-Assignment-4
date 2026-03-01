@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunter x Hunter Survey</title>
+</head>
+<body>
+    <form id = "surveyForm" action = "https://httpbin.org/post" method = "post">
+        <h1>Hunter X Hunter Survey</h1>
+
+        <div id = "survey-container">
+
+            <div id = "name-input-container">
+                <input id = "name" type = "text">
+            </div>
+
+            <div id = "radio-container">
+
+                <div class = "radio-option-container">
+                    <img src="" alt="">
+                    <input type="radio" id = "characterGon" value = "gon">
+                </div>
+
+                <div class = "radio-option-container">
+                    <img src="" alt="">
+                    <input type="radio" id = "characterKillua" value = "killua">
+                </div class = "radio-option-container">
+
+                <div class = "radio-option-container">
+                    <img src="" alt="">
+                    <input type="radio" id = "characterKurapika" value = "kurapika">
+                </div>
+                
+            </div>
+
+            <div id = "dropdown-container">
+                <select name="" id="storyArc">
+                    <option value="notSelected">Select Your Favorite Story Arc</option>
+                    <option value="hunterExam">Hunter Exam</option>
+                    <option value="heavensArena">heavensArena</option>
+                    <option value="yorkNewCity">York New City</option>
+                    <option value="greedIsland">Greed Island</option>
+                    <option value="chimeraAnt">Chimera Ant</option>
+                    <option value="electionArc">Chairman Election</option>
+                    <option value="successionContest">Succession Contest</option>
+                </select>
+            </div>
+        </div>
+    </form>
+
+    <script src = "script.js"></script>
+</body>
+</html>

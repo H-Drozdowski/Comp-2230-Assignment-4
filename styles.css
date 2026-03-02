@@ -4,9 +4,9 @@
     Assignment 4
 
     colors:
+        dark green: #355E3B
         green: #C2EABA
-        orange: #E8AA14
-        #A7C4A0
+        light green: #A7C4A0
 */
 
 body{
@@ -16,6 +16,10 @@ body{
 
 header{
     text-align: center;
+    background-color: #355E3B;
+    padding-top: 0.5rem;
+    padding-bottom: 0.1rem;
+    border-radius: 10px;
 }
 
 h1{
@@ -65,7 +69,7 @@ h2{
     flex-wrap: wrap;
     justify-content: center;
     border-radius: 10px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
     background: repeating-linear-gradient(#C2EABA, #87a081);
 }
 
@@ -140,4 +144,18 @@ h2{
 #submitContainer{
     text-align: center;
     padding-top: 1rem;
+}
+
+#radioErrorContainer{
+    margin-bottom: 0.5rem;
+}
+
+.error{
+    color: red;
+    background-color: rgb(255, 195, 195);
+    padding: 0.1rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    margin: 0.2rem;
+    border-radius: 10px;
 }

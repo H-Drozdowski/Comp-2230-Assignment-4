@@ -2,6 +2,11 @@
     Hudson Drozdowski
     March 01, 2026
     Assignment 4
+
+    colors:
+        green: #C2EABA
+        orange: #E8AA14
+        #A7C4A0
 */
 
 body{
@@ -45,6 +50,7 @@ h2{
 }
 
 #surveyContainer{
+    background: linear-gradient(#C2EABA, #3c4739);
     border: 2px black solid;
     display: block;
     text-align: center;
@@ -60,6 +66,7 @@ h2{
     justify-content: center;
     border-radius: 10px;
     margin-bottom: 1rem;
+    background: repeating-linear-gradient(#C2EABA, #87a081);
 }
 
 .radio-option-container{
@@ -69,6 +76,7 @@ h2{
     border: 2px black solid;
     padding: 0%;
     border-radius: 10px;
+    background-color: #C2EABA;
 }
 
 .char-selection-container{
@@ -86,6 +94,7 @@ h2{
 }
 
 #inputsContainer{
+    background: repeating-linear-gradient(#C2EABA, #87a081);
     border-radius: 10px;
     border: 2px black solid;
     padding: 1rem;

@@ -10,54 +10,100 @@
     <form id = "surveyForm" action = "https://httpbin.org/post" method = "post">
 
         <div id = "surveyContainer">
-            <h1>Hunter X Hunter Survey</h1>
+            <header>
+                <img src="images\logo.png" alt="" id = "logo">
+                <h1>Survey</h1>
+            </header>
 
             <div id = "nameInputContainer">
-                <input id = "name" type = "text" name = "name">
+                <label for="name">Name:</label>
+                <input id = "name" type = "text" name = "name" placeholder="Enter your name.">
             </div>
+
+            <h2>Select your favorite character:</h2>
 
             <div id = "radio-container">
 
                 <div class = "radio-option-container">
-                    <img src="" alt="">
-                    <input type="radio" id = "characterGon" value = "gon" name = "favCharacter">
+                    <img src="images\gon.png" alt="" id = "characterImage">
+
+                    <div class = "char-selection-container">
+                        <label for="characterGon">Gon:</label>
+                        <input type="radio" id = "characterGon" value = "gon" name = "favCharacter">
+                    </div>
                 </div>
 
                 <div class = "radio-option-container">
-                    <img src="" alt="">
-                    <input type="radio" id = "characterKillua" value = "killua" name = "favCharacter">
-                </div class = "radio-option-container">
+                    <img src="images\Kurapika.jpg" alt="" id = "characterImage">
+
+                    <div class = "char-selection-container">
+                        <label for="characterKurapika">Kurapika:</label>
+                        <input type="radio" id = "characterKurapika" value = "kurapika" name = "favCharacter">
+                    </div>
+                </div>
 
                 <div class = "radio-option-container">
-                    <img src="" alt="">
-                    <input type="radio" id = "characterKurapika" value = "kurapika" name = "favCharacter">
+                    <img src="images\killua.jpg" alt="" id = "characterImage">
+
+                    <div class = "char-selection-container">
+                        <label for="characterKillua">Killua:</label>
+                        <input type="radio" id = "characterKillua" value = "killua" name = "favCharacter">
+                    </div>
+                </div>
+
+                <div class = "radio-option-container">
+                    <img src="images\leorio.jpg" alt="" id = "characterImage">
+
+                    <div class = "char-selection-container">
+                        <label for="characterLeorio">Leorio:</label>
+                        <input type="radio" id = "characterLeorio" value = "leorio" name = "favCharacter">
+                    </div>
+                </div>
+
+                <div class = "radio-option-container">
+                    <img src="images\chrollo.jpg" alt="" id = "characterImage">
+
+                    <div class = "char-selection-container">
+                        <label for="characterChrollo">Chrollo:</label>
+                        <input type="radio" id = "characterChrollo" value = "chrollo" name = "favCharacter">
+                    </div>
                 </div>
                 
             </div>
 
-            <div id = "favoriteEpisodeContainer">
-                <input type="number" name="favoriteEpisode" id="favoriteEpisode">
+            <div id = "inputsContainer">
+                <div id = "favoriteEpisodeContainer">
+                    <label for="favoriteEpisode">Select your favorite episode:</label>
+                    <input type="number" name="favoriteEpisode" id="favoriteEpisode" min="1" max="148">
+                </div>
+
+                <div id = "dropdownContainer">
+                    <label for="storyArc">Select your favorite story arc:</label>
+                    <select name = "storyArc" id="storyArc">
+                        <option value="hunterExam">Hunter Exam</option>
+                        <option value="heavensArena">heavensArena</option>
+                        <option value="yorkNewCity">York New City</option>
+                        <option value="greedIsland">Greed Island</option>
+                        <option value="chimeraAnt">Chimera Ant</option>
+                        <option value="electionArc">Chairman Election</option>
+                        <option value="successionContest">Succession Contest</option>
+                    </select>
+                </div>
+                    
+                <div id = "RatingContainer">
+                    <label for="rating">Rate the show:</label>
+                    <input type="range" id = rating name = "rating" min="0" max="10" value="0">
+                    <p id = "ratingDisplay">(0/10)</p>
+                </div>
+
+                <div id = "emailContainer">
+                    <label for="email">Please enter your email for the results:</label>
+                    <input type="text" id = "email" name = "email">
+                </div>
             </div>
 
-            <div id = "dropdownContainer">
-                <select name = "storyArc" id="storyArc">
-                    <option value="notSelected">Select Your Favorite Story Arc</option>
-                    <option value="hunterExam">Hunter Exam</option>
-                    <option value="heavensArena">heavensArena</option>
-                    <option value="yorkNewCity">York New City</option>
-                    <option value="greedIsland">Greed Island</option>
-                    <option value="chimeraAnt">Chimera Ant</option>
-                    <option value="electionArc">Chairman Election</option>
-                    <option value="successionContest">Succession Contest</option>
-                </select>
-            </div>
-                
-            <div id = "RatingContainer">
-                <input type="range" id = rating name = "rating" min="0" max="10">
-            </div>
-
-            <div id = "emailContainer">
-                <input type="text" id = "email" name = "email">
+            <div id = "submitContainer">
+                <input type="submit" value="submit">
             </div>
         </div>
     </form>

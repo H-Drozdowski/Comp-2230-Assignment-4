@@ -2,8 +2,142 @@
     Hudson Drozdowski
     March 01, 2026
     Assignment 4
+
+    colors:
+        green: #C2EABA
+        orange: #E8AA14
+        #A7C4A0
 */
 
+body{
+    display: flex;
+    justify-content: center;
+}
+
+header{
+    text-align: center;
+}
+
+h1{
+    padding: 0%;
+    margin: 0%;
+    margin-bottom: 1rem;
+}
+
+h2{
+    text-align: center;
+}
+
+#logo{
+    max-width: 250px;
+}
+
+#nameInputContainer{
+    margin: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-bottom: 2px black solid;
+    border-radius: 3px;
+    display: flex;
+}
+
+#nameInputContainer input{
+    margin: 0.2rem; 
+}
+
+#nameInputContainer label{
+    margin-right: 0.5rem; 
+}
+
 #surveyContainer{
+    background: linear-gradient(#C2EABA, #3c4739);
     border: 2px black solid;
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: 1rem;
+}
+
+#radio-container{
+    border: 2px black solid;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    background: repeating-linear-gradient(#C2EABA, #87a081);
+}
+
+.radio-option-container{
+    margin-bottom: 0.2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: 2px black solid;
+    padding: 0%;
+    border-radius: 10px;
+    background-color: #C2EABA;
+}
+
+.char-selection-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0.25rem;
+}
+
+#characterImage{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-width: 125px;
+    border-bottom: 2px black solid;
+}
+
+#inputsContainer{
+    background: repeating-linear-gradient(#C2EABA, #87a081);
+    border-radius: 10px;
+    border: 2px black solid;
+    padding: 1rem;
+}
+
+#favoriteEpisodeContainer{
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+#favoriteEpisodeContainer label{
+    margin-right: 0.5rem;
+}
+
+#dropdownContainer{
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+#dropdownContainer label{
+    margin-right: 0.5rem;
+}
+
+#RatingContainer{
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+#RatingContainer p{
+    margin: 0%;
+    margin-left: 1%;
+}
+
+#emailContainer{
+    display: flex;
+}
+
+#emailContainer label{
+    margin-right: 0.5rem;
+}
+
+#submitContainer{
+    text-align: center;
+    padding-top: 1rem;
 }

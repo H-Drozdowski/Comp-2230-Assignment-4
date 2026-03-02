@@ -163,3 +163,26 @@ h2{
 label:hover{
     text-decoration: underline;
 }
+
+@media (max-width: 650px){
+
+    #characterImage{
+        max-width: 200px;
+    }
+
+    label{
+        font-size: 20px;
+    }
+    
+    input{
+        font-size: 20px;
+    }
+
+    #submitButton{
+        font-size: 20px;
+    }
+
+    .error{
+        font-size: 20px;
+    }
+}

@@ -159,3 +159,7 @@ h2{
     margin: 0.2rem;
     border-radius: 10px;
 }
+
+label:hover{
+    text-decoration: underline;
+}

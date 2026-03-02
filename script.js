@@ -28,7 +28,7 @@ form.addEventListener("submit", (event) => {
 })
 
 const validateForm = () => {
-    isValid = true
+    let isValid = true
 
     // Clear error messages
     clearErrorMessages()
@@ -46,7 +46,7 @@ const validateForm = () => {
     // Name validation
     if(name.value === ""){
         isValid = false
-        addInputError(nameContainer, "Name cannot be empty.")
+        addInputError(nameContainer, "Please enter your name.")
     } 
 
     // Validates that a radio element has been checked
@@ -56,7 +56,11 @@ const validateForm = () => {
     }
 
     // Validates favorite episode is within the range of episodes.
-    if (favEpisode.value <= 0 || favEpisode.value > 148){
+    if (favEpisode.value === ""){
+        isValid = false
+        addInputError(favEpisodeContainer, "Please enter your favorite episode.")
+    }
+    else if (favEpisode.value <= 0 || favEpisode.value > 148){
         isValid = false
         addInputError(favEpisodeContainer, "Favorite episode must be between in the range of existing episodes (1 - 148)")
     }
@@ -67,9 +71,9 @@ const validateForm = () => {
 // Checks all of the radios from an input list of radios to see
 // if at least one has been selected.
 const checkRadiosListValid = (list) => {
-    radioIsValid = false
-    for (let num in list){
-        if (list[num].checked){
+    let radioIsValid = false
+    for (let radio of list){
+        if (radio.checked){
             radioIsValid = true
         }
     }

@@ -20,10 +20,10 @@ form.addEventListener("submit", (event) => {
     event.preventDefault()
 
     if (validateForm()){
-        form.submit()
+        //form.submit()
     }
     else{
-        console.error("Validation failed.")
+        console.log("Validation failed.")
     }
 })
 

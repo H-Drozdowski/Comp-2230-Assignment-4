@@ -12,7 +12,16 @@
 body{
     display: flex;
     justify-content: center;
-    background: linear-gradient(rgb(255, 94, 0), rgb(255, 221, 189));
+    align-items: center;
+    background: linear-gradient(rgb(255, 94, 0), rgb(255, 221, 189), rgb(255, 94, 0));
+}
+
+label{
+    font-size: 20px;
+}
+
+input{
+    font-size: 20px;
 }
 
 header{
@@ -96,7 +105,7 @@ h2{
 .characterImage{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    max-width: 125px;
+    max-width: 175px;
     border-bottom: 2px black solid;
 }
 
@@ -174,18 +183,18 @@ label:hover{
     }
 
     label{
-        font-size: 20px;
+        font-size: 25px;
     }
     
     input{
-        font-size: 20px;
+        font-size: 25px;
     }
 
     #submitButton{
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .error{
-        font-size: 20px;
+        font-size: 25px;
     }
 }

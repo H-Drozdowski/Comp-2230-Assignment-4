@@ -20,7 +20,7 @@ form.addEventListener("submit", (event) => {
     event.preventDefault()
 
     if (validateForm()){
-        //form.submit()
+        form.submit()
     }
     else{
         console.log("Validation failed.")

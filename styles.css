@@ -12,6 +12,7 @@
 body{
     display: flex;
     justify-content: center;
+    background: linear-gradient(rgb(255, 94, 0), rgb(255, 221, 189));
 }
 
 header{
@@ -70,7 +71,8 @@ h2{
     justify-content: center;
     border-radius: 10px;
     margin-bottom: 0.6rem;
-    background: repeating-linear-gradient(#C2EABA, #87a081);
+    background: linear-gradient(#C2EABA, #87a081);
+
 }
 
 .radio-option-container{
@@ -90,7 +92,7 @@ h2{
     padding-bottom: 0.25rem;
 }
 
-#characterImage{
+.characterImage{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     max-width: 125px;
@@ -98,7 +100,7 @@ h2{
 }
 
 #inputsContainer{
-    background: repeating-linear-gradient(#C2EABA, #87a081);
+    background: linear-gradient(#C2EABA, #87a081);
     border-radius: 10px;
     border: 2px black solid;
     padding: 1rem;
@@ -162,4 +164,27 @@ h2{
 
 label:hover{
     text-decoration: underline;
+}
+
+@media (max-width: 650px){
+
+    .characterImage{
+        max-width: 200px;
+    }
+
+    label{
+        font-size: 20px;
+    }
+    
+    input{
+        font-size: 20px;
+    }
+
+    #submitButton{
+        font-size: 20px;
+    }
+
+    .error{
+        font-size: 20px;
+    }
 }

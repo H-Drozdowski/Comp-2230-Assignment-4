@@ -33,9 +33,6 @@ const validateForm = () => {
     // Clear error messages
     clearErrorMessages()
 
-    // Regular expression for email validation 
-    const complexEmailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
-
     // Elements to check validation
     const name = document.getElementById("name")
     const favCharactersList = document.getElementsByName("favCharacter")
@@ -43,50 +40,88 @@ const validateForm = () => {
     const email = document.getElementById("email")
 
     // For when I want the error to display on a specific location
-    const radioErrorContainer = document.getElementById("radioErrorContainer")
     const nameContainer = document.getElementById("nameInputContainer")
-    const favEpisodeContainer = document.getElementById("favoriteEpisodeContainer")
-    const emailContainer = document.getElementById("emailContainer")
 
-    // Name validation
-    if(name.value === ""){
-        isValid = false
-        addInputError(nameContainer, "Please enter your name.")
-    } 
+    // Name validation.
+    isValid = checkValueIsEmpty(name.value, nameContainer) && isValid
 
-    // Validates that a radio element has been checked
-    if (!checkRadiosListValid(favCharactersList)){
-        isValid = false
-        addInputError(radioErrorContainer, "A selection must be made to continue.")
-    }
+    // Validates that a radio element has been checked.
+    isValid = checkRadiosListValid(favCharactersList) && isValid
 
     // Validates favorite episode is within the range of episodes.
-    if (favEpisode.value === ""){
+    isValid = checkEpisodeRange(favEpisode.value) && isValid
+
+    // Validates email.
+    isValid = checkEmail(email.value) && isValid
+
+    return isValid
+} 
+
+
+
+const checkValueIsEmpty = (value, errorContainer) => {
+    let isValid = true
+    if (value === ""){
         isValid = false
-        addInputError(favEpisodeContainer, "Please enter your favorite episode.")
+        addInputError(errorContainer, "Cannot be blank.")
     }
-    else if (favEpisode.value <= 0 || favEpisode.value > 148){
+
+    return isValid
+}
+
+const checkEpisodeRange = (value) => {
+    let isValid = true
+    const favEpisodeContainer = document.getElementById("favoriteEpisodeContainer")
+    isValid = checkValueIsEmpty(value, favEpisodeContainer)
+
+    if (!isValid){
+        // Makes sure both errors are not displayed at the same time.
+    }
+    else if (value <= 0 || value > 148){
         isValid = false
         addInputError(favEpisodeContainer, "Favorite episode must be between in the range of existing episodes (1 - 148)")
     }
 
-    if (!complexEmailPattern.test(email.value)){
-        addInputError(emailContainer, "Please enter a valid email.")
+    return isValid
+}
+
+const checkEmail = (value) => {
+    let isValid = true
+    const emailContainer = document.getElementById("emailContainer")
+
+    // Regular expression for email validation 
+    const complexEmailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+
+    isValid = checkValueIsEmpty(value, emailContainer)
+
+    if (!isValid){
         isValid = false
     }
 
+    else if(!complexEmailPattern.test(value)){
+        isValid = false
+        addInputError(emailContainer, "Must be a valid email address.")
+    }
+
     return isValid
-} 
+}
 
 // Checks all of the radios from an input list of radios to see
 // if at least one has been selected.
 const checkRadiosListValid = (list) => {
     let radioIsValid = false
+    const radioErrorContainer = document.getElementById("radioErrorContainer")
+    
     for (let radio of list){
         if (radio.checked){
             radioIsValid = true
         }
     }
+
+    if (!radioIsValid){
+        addInputError(radioErrorContainer, "A selection must be made to continue.")
+    }
+
     return radioIsValid
 }
 
